@@ -1,0 +1,11 @@
+CREATE TABLE `alumnos` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`nombre` VARCHAR(50) NOT NULL COLLATE 'latin1_spanish_ci',
+	`apellido` VARCHAR(100) NOT NULL COLLATE 'latin1_spanish_ci',
+	`matricula` INT(10) NOT NULL,
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='latin1_spanish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=39
+;
