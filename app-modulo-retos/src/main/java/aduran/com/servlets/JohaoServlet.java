@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import aduran.com.dao.MapSocios;
 import aduran.com.dao.impl.EnviarQuery;
 import aduran.com.dao.impl.SociosDaoImp;
 import aduran.com.exceptions.GenericException;

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 
+<%@page import="aduran.com.vo.EnumOcupaciones"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="aduran.com.vo.OcupacionImp"%>
 <html>
 <body>
 <h2>Formulario Inscripción Socios</h2>
@@ -24,7 +27,21 @@
 	  </div>
 	  <div class="mb-3">
 	    <label for="ocupacion" class="form-label">Ocupación</label>
-	    <input type="text" name="ocupacion" required="required" class="form-control" id="ocupacion">
+	    <select name="ocupacion" required="required">
+	    <% 		ArrayList<EnumOcupaciones> ocu = new ArrayList<EnumOcupaciones>();
+	    		ocu.add(EnumOcupaciones.Desarrollador);
+	    		ocu.add(EnumOcupaciones.Financiero);
+	    		ocu.add(EnumOcupaciones.Ingeniero);
+	    		ocu.add(EnumOcupaciones.Profesional);
+	    		ocu.add(EnumOcupaciones.Otros);
+	    		
+	    		for(EnumOcupaciones enumocu: ocu){
+	    			out.print("<option value="+ enumocu+">" +enumocu+ "</option>");
+	    		}
+	    		
+	    %>
+	    
+	    </select>
 	  </div>
 	  <div class="mb-3">
 	    <label for="fecha" class="form-label">Fecha de Nacimiento</label>
@@ -35,6 +52,6 @@
 	  <button type="submit" class="btn btn-primary">enviar</button>
 	</form>	
 	
-	
+		
 </body>
 </html>
